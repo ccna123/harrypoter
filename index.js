@@ -2,7 +2,13 @@ const { default: axios } = require("axios");
 const express = require("express");
 const app = express();
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
+  res.status(200).send({
+    mess: "Success",
+  });
+});
+
+app.get("/getAllChar", async (req, res) => {
   try {
     const result = await axios.get(
       "https://potterapi-fedeperin.vercel.app/en/characters"
