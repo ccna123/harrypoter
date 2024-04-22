@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install pm2
-npm install -g pm2 -y
+sudo npm install -g pm2 -y
 
 #go to app working directory
 chmod 700 -R harrypoter/
