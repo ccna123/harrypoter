@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/harrypoter
+    fileExistsBehavior: overwrite
 hooks:
   BeforeInstall:
     - location: /scripts/before_install.sh
