@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #go to app working directory
-chmod 700 -R  /home/ec2-user/harrypoter/
+sudo chmod 700 -R  /home/ec2-user/harrypoter/
 sudo chown -R ec2-user:ec2-user  /home/ec2-user/harrypoter/
 cd /home/ec2-user/harrypoter/
 
