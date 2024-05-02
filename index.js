@@ -8,8 +8,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/getAllChar", async (req, res) => {
-  return (
+app.get("/getAllChars", async (req, res) => {
+  return res.json([
     {
       fullName: "Harry James Potter",
       nickname: "Harry",
@@ -46,11 +46,11 @@ app.get("/getAllChar", async (req, res) => {
         "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/ron_weasley.png",
       birthdate: "Mar 1, 1980",
       index: 2,
-    }
-  );
+    },
+  ]);
 });
 app.get("/getAllSpells", async (req, res) => {
-  return (
+  return res.json([
     {
       spell: "Accio",
       use: "Summoning charm",
@@ -75,11 +75,11 @@ app.get("/getAllSpells", async (req, res) => {
       spell: "Scourgify",
       use: "Cleans things",
       index: 4,
-    }
-  );
+    },
+  ]);
 });
 app.get("/getAllBooks", async (req, res) => {
-  return (
+  return res.json([
     {
       number: 1,
       title: "Harry Potter and the Sorcerer's Stone",
@@ -115,8 +115,8 @@ app.get("/getAllBooks", async (req, res) => {
       cover:
         "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/3.png",
       index: 2,
-    }
-  );
+    },
+  ]);
 });
 
 app.listen("4000", (req, res) => {
