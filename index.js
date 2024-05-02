@@ -1,4 +1,3 @@
-const { default: axios } = require("axios");
 const express = require("express");
 const serverless = require("serverless-http");
 require("dotenv").config();
@@ -21,7 +20,7 @@ app.use("/harrypotter", bookRoute);
 if (process.env.ENVIRONMENT === "lambda") {
   module.exports.handler = serverless(app);
 } else {
-  app.listen("4000", (req, res) => {
+  app.listen("4000", () => {
     console.log("Server listening on port 4000");
   });
 }
