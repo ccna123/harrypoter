@@ -3,9 +3,9 @@ const express = require("express");
 const serverless = require("serverless-http");
 require("dotenv").config();
 
-const charRoute = require("./chars");
-const spellRoute = require("./spells");
-const bookRoute = require("./books");
+const charRoute = require("./controller/chars");
+const spellRoute = require("./controller/spells");
+const bookRoute = require("./controller/books");
 
 const app = express();
 app.get("/health", (req, res) => {
