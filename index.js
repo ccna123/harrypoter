@@ -7,15 +7,15 @@ const spellRoute = require("./controller/spells");
 const bookRoute = require("./controller/books");
 
 const app = express();
-app.get("/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.status(200).send({
     mess: "Success",
   });
 });
 
-app.use("/harrypotter", charRoute);
-app.use("/harrypotter", spellRoute);
-app.use("/harrypotter", bookRoute);
+app.use("/api/harrypotter", charRoute);
+app.use("/api/harrypotter", spellRoute);
+app.use("/api/harrypotter", bookRoute);
 
 if (process.env.ENVIRONMENT === "lambda") {
   module.exports.handler = serverless(app);
